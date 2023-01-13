@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+:root {
+    --body-color: #f3f3f3;
+    --main-color: #C63EFF;
+    --secondary-color: #000;
+    --font-family: 'Josefin Sans', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--body-color);
+    font-family: var(--font-family);
+}
+
+nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    z-index: 10;
+    justify-content: space-around;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+nav>div>ul {
+    display: flex;
+    list-style: none;
+}
+
+nav>div>ul>li>a {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px 20px;
+
+
+
+}
+
+nav>div>ul>li>a:hover {
+    color: #FFF;
+    background: #C63EFF;
+    padding: 10px 20px;
+    transition: .4s ease-in-out;
+}
+
+/* header end  */
+.poster-container {
+    background: url(images/slider1.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.poster-heading {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+}
+
+strong {
+    color: var(--main-color);
+    position: relative;
+    z-index: 1;
+}
+
+strong::before {
+    background-color: #ffffff;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+button {
+    border: none;
+    margin-right: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background: var(--main-color);
+    color: white;
+    font-weight: 400;
+    box-shadow: 1px 1px 0px 0px white;
+
+}
+
+button:hover {
+    border: 1px solid var(--secondary-color);
+    background: var(--secondary-color);
+    transition: .4s ease-in-out;
+}
+
+#btn-2 {
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid var(--secondary-color);
+}
+
+#btn-2:hover {
+    background: var(--secondary-color);
+    transition: .4s ease-in-out;
+}
+/* poster container end  */
+main{
+    width: 80%;
+    margin: auto;
+}
+
+/* main end  */
+.Courses-tittle{
+    text-align: center;
+    font-size: 40px;
+}
+.our-courses{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    padding: 50px 0px;
+}
+.courses{
+    display: flex;
+    flex-direction: column;
+    background: white;
+}
+.courses:hover{
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    transition: 0.4s ease-in-out;
+    transform: rotate(5deg);
+}
+.course-banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.course-details{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.course-tittle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.course-tittle>h2{
+    color: var(--main-color);
+}
+.course-tittle>h4{
+    background: #C63EFF;
+    color: white;
+    padding: 10px;
+    border-radius: 15px 0px 0px 15px;
+}
+.rating-reviews{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    align-items: center;
+}
+.ratings>i{
+    color: goldenrod;
+    font-size: 14px;
+}
+.course-description{
+    text-align: justify;
+    line-height: 20px;
+}
+.course-outline{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+    line-height: 20px;
+}
+.courses-pagination-buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+}
+.courses-pagination-buttons>button{
+    border: 1px solid var(--main-color);
+    margin-right: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    text-transform: uppercase;
+    background:none;
+    color: var(--main-color);
+    font-weight: 400;
+}
+.courses-pagination-buttons>button:hover{
+    background: var(--main-color);
+    color: white;
+}
+
+/* ours courses end  */
+.our-services{
+    padding: 50px 0px;
+    display: grid;
+    gap: 30px;
+    row-gap: 50px;
+    grid-template-columns: repeat(3,1fr);
+}
+.service{
+    display: flex;
+    align-items: start;
+    gap: 40px;
+}
+.service:hover{
+    transform: scale(1.1);
+    transition: .6s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+.icon{
+    font-size: 24px;
+    background: var(--main-color);
+    color: white;
+    padding: 15px;
+}
+.service-details>h3{
+    font-size: 22px;
+}
+.service-details>p{
+    text-align:justify;
+    line-height: 20px;
+}
